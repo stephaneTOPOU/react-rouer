@@ -1,7 +1,11 @@
 import React, { Component } from "react";
+import {withRouter} from 'react-router-dom';
 
 class Navbar extends Component {
     render() {
+        setTimeout(()=>{
+            this.props.history.push('/contact');
+        }, 5000);
         return (
             <div>
                 <nav className="navbar navbar-expand-lg bg-light">
@@ -25,6 +29,9 @@ class Navbar extends Component {
                                 <a className="nav-link active" aria-current="page" href="/">
                                     Accueil
                                 </a>
+                                <a className="nav-link active" aria-current="page" href="/blog">
+                                    Blog
+                                </a>
                                 <a className="nav-link" href="/about">
                                     A propos
                                 </a>
@@ -42,4 +49,4 @@ class Navbar extends Component {
     }
 }
 
-export default Navbar;
+export default withRouter(Navbar);

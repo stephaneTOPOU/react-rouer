@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 
 class User extends Component {
-    
+
     state = {
         name: null
     }
@@ -15,9 +15,10 @@ class User extends Component {
     }
 
     render() {
+
         return (
             <div>
-                <h3>User Component</h3>
+                <h3>User </h3>
                 <p>{this.state.name}</p>
             </div>
         )
